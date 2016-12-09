@@ -12,7 +12,7 @@ public class uiManager : MonoBehaviour
 {
     //need itchBar to be static unless it works how its desired without
     public int itchBar= 450; 
-	public GUISkin theSkin;
+	//public GUISkin theSkin;
     public Button[] buttons; 
     bool paused;
     bool muted;
@@ -26,6 +26,7 @@ public class uiManager : MonoBehaviour
 
     public int loseLimit = 200;
     public int winLimit = 50;
+
 
     /*TODO: get rid of the invokerepeating function
      when the testing and damage has been figured out
@@ -45,6 +46,7 @@ public class uiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!(SceneManager.GetActiveScene().name == "MainMenu" ||
         SceneManager.GetActiveScene().name == "DogStory" ||
         SceneManager.GetActiveScene().name == "GameOver" ||
@@ -82,6 +84,12 @@ public class uiManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+	public void Play1()
+	{
+		SceneManager.LoadScene (5);
+	}
+
     public void Pause()
     {
        if (!paused)
